@@ -1,2 +1,8 @@
 deploy:
 		git subtree push --prefix collective_blog/ heroku master
+lint:
+	  cd collective_blog && bundle exec slim-lint app/views/ && bundle exec rubocop
+install:
+	  bundle
+test:
+		cd collective_blog && bin/rails test
