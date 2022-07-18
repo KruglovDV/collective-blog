@@ -1,0 +1,8 @@
+en:
+  layouts:
+    shared:
+      nav:
+        logo_alt: Logo
+        sign_in: Sign in
+        sign_up: Sign up
+        log_out: Log out
