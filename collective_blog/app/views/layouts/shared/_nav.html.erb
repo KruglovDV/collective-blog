@@ -10,10 +10,10 @@
           <%= link_to t('.log_out'), destroy_user_session_path, method: :delete, class: 'nav-link link-dark'%>
       <% else %>
         <li class="nav-item me-2">
-          <%= link_to t('.sign_in'), new_user_session_path, class: "nav-link link-dark #{current_page?(new_user_session_path) ? 'active' : ''}"%>
+          <%= link_to t('.sign_in'), new_user_session_path, class: "nav-link link-dark#{' active' if current_page?(new_user_session_path)}"%>
         </li>
         <li class="nav-item me-2">
-          <%= link_to t('.sign_up'), new_user_registration_path, class: "nav-link link-dark #{current_page?(new_user_registration_path) ? 'active' : ''}"%>
+          <%= link_to t('.sign_up'), new_user_registration_path, class: "nav-link link-dark#{' active' if current_page?(new_user_registration_path)}"%>
         </li>
       <% end %>
     </div>
