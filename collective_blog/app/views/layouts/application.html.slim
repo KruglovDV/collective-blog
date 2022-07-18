@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title
+      | CollectiveBlog
+    meta[name="viewport" content="width=device-width,initial-scale=1"]
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_pack_tag 'application', media: 'all'
+    = javascript_pack_tag 'application', id: 'application'
+  body.d-flex.flex-column.h-100
+    = render 'layouts/shared/nav'
+    .container.my-4
+      .my-2
+        = render_flash_messages dismissible: true
+      = yield
