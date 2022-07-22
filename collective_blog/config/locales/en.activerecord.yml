@@ -1,0 +1,35 @@
+en:
+  activerecord:
+    models:
+      post: Post
+      user: User
+      category: Category
+    attributes:
+      post:
+        title: Title
+        body: Body
+        category: Category
+      user:
+        email: Email
+        password: Password
+        password_confirmation: Password confirmation
+        remember_me: Remember
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: already exists
+              blank: can't be blank'
+            password:
+              blank: can't be blank
+            password_confirmation:
+              confirmation: cant be blank
+        post:
+          attributes:
+            title:
+              blank: can't be blank
+            body:
+              blank: can't be blank
+            category:
+              required: required

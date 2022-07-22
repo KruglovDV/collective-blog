@@ -1,0 +1,6 @@
+en:
+  posts:
+    index:
+      header: Collective blog
+    create:
+      success: Post was created

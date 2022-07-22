@@ -6,6 +6,7 @@
 
     .nav.nav-pills
       - if user_signed_in?
+        = link_to t('.add_post'), new_post_path, class: "nav-link link-dark#{' active' if current_page?(new_post_path)}"
         = link_to t('.log_out'), destroy_user_session_path, method: :delete, class: 'nav-link link-dark'
       - else
         li.nav-item.me-2

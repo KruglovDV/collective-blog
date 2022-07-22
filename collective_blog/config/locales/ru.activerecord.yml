@@ -1,0 +1,38 @@
+ru:
+  activerecord:
+    models:
+      post: Пост
+      user: Пользователь
+      category: Категория
+    attributes:
+      post:
+        title: Заголовок
+        body: Содердание
+        category: Категория
+      user:
+        email: Почта
+        password: Пароль
+        password_confirmation: Подтверждение пароля
+        remember_me: Запомнить
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: уже существует
+              blank: не может быть пустым
+            password:
+              blank: не может быть пустым
+              too_short: слишком короткий
+            password_confirmation:
+              confirmation: не может быть пустым
+        post:
+          attributes:
+            title:
+              blank: не может быть пустым
+            body:
+              blank: не может быть пустым
+            category:
+              required: обязательно
+
+

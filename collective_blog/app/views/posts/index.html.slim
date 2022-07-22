@@ -1,0 +1,16 @@
+h1 = t('.header')
+
+div.row
+  - @posts.each do |post|
+    div.col-md-12
+      div.card.mb-3
+        div.card-body
+          h2.h5.card-title
+            = post.title
+          div.card-text.mb-2
+            = post.body
+          div.text-right.small.text-muted.mt-auto
+            span.me-2
+              = distance_of_time_in_words_to_now post.created_at
+            span
+              = post.creator.email

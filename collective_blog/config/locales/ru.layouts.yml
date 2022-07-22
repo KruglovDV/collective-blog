@@ -1,0 +1,9 @@
+ru:
+  layouts:
+    shared:
+      nav:
+        logo_alt: Логотип
+        sign_in: Вход
+        sign_up: Регистрация
+        log_out: Выход
+        add_post: Добавить пост

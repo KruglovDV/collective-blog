@@ -1,0 +1,13 @@
+ru:
+  users:
+    registrations:
+      new:
+        sign_up: Регистрация
+    sessions:
+      new:
+        sign_in: Вход
+    shared:
+      links:
+        log_in: Вход
+        sign_up: Регистрация
+        forgot_password: Забыли пароль?

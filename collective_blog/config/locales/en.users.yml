@@ -1,0 +1,13 @@
+ru:
+  users:
+    registrations:
+      new:
+        sign_up: Sing up
+    sessions:
+      new:
+        sign_in: Sign in
+    shared:
+      links:
+        log_in: Log in
+        sign_up: Sign up
+        forgot_password: Forgot password?

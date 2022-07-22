@@ -1,0 +1,6 @@
+ru:
+  posts:
+    index:
+      header: Коллективный блог
+    create:
+      success: Пост был создан
