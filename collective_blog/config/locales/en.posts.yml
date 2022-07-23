@@ -1,6 +1,12 @@
 en:
   posts:
+    form:
+      create_post: Create post
     index:
       header: Collective blog
     create:
       success: Post was created
+    show:
+      all_posts: All posts
+      comment: Comment
+      leave_comment: Leave comment

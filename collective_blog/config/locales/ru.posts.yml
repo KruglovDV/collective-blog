@@ -1,6 +1,12 @@
 ru:
   posts:
+    form:
+      create_post: Создать пост
     index:
       header: Коллективный блог
     create:
       success: Пост был создан
+    show:
+      all_posts: Все статьи
+      comment: Комментарий
+      leave_comment: Оставить комментарий

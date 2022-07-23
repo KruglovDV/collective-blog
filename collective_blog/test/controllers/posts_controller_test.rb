@@ -23,4 +23,9 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
     assert created_post
     assert_redirected_to root_path
   end
+
+  test 'opens show post page' do
+    get post_path(posts(:first))
+    assert_response :success
+  end
 end

@@ -35,9 +35,7 @@ module FlashRailsMessages
     end
 
     def custom_alert_classes
-      if options.fetch(:dismissible, false)
-        'alert-dismissible'
-      end
+      return 'alert-dismissible' if options.fetch(:dismissible, false)
     end
   end
 end

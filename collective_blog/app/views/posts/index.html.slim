@@ -1,15 +1,16 @@
 h1 = t('.header')
 
-div.row
+.row
   - @posts.each do |post|
-    div.col-md-12
-      div.card.mb-3
-        div.card-body
+    .col-md-12
+      .card.mb-3
+        .card-body
           h2.h5.card-title
-            = post.title
-          div.card-text.mb-2
+            a.link-dark.text-decoration-none href=post_path(post)
+              = post.title
+          .card-text.mb-2.text-truncate
             = post.body
-          div.text-right.small.text-muted.mt-auto
+          .text-right.small.text-muted.mt-auto
             span.me-2
               = distance_of_time_in_words_to_now post.created_at
             span

@@ -1,0 +1,17 @@
+.card.mb-4
+  .card-header.small.mb-2.d-flex
+    div
+      span.font-weight-bold
+        = comment.post.creator.email
+      span.mx-2.font-weight-light
+        = distance_of_time_in_words_to_now comment.created_at
+
+  .card-body.d-flex
+    .w-100
+      .mb-3 = comment.content
+      div
+        - comment.children.each do |child|
+          = render 'comment', comment: child
+  hr.my-2
+  .mb-2.m-4
+    = render 'comments/form', post: comment.post, comment: comment.children.build

@@ -36,3 +36,9 @@ Metrics/BlockLength:
 
 Style/AsciiComments:
   Enabled: false
+
+Rails/LexicallyScopedActionFilter:
+  Enabled: false
+
+Rails/InverseOf:
+  Enabled: false

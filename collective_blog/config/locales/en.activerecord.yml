@@ -4,6 +4,7 @@ en:
       post: Post
       user: User
       category: Category
+      post_comment: Comment
     attributes:
       post:
         title: Title
@@ -14,6 +15,8 @@ en:
         password: Password
         password_confirmation: Password confirmation
         remember_me: Remember
+      post_comment:
+        content: Text
     errors:
       models:
         user:
@@ -33,3 +36,7 @@ en:
               blank: can't be blank
             category:
               required: required
+        post_comment:
+          attributes:
+            content:
+              blank: can't be blank'

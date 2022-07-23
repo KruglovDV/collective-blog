@@ -26,19 +26,14 @@ gem 'jbuilder', '~> 2.7'
 # gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
+gem 'ancestry'
 gem 'bootsnap', '>= 1.4.4', require: false
-
-gem 'rollbar'
-
 gem 'devise'
-
-gem 'flash_rails_messages'
-
-gem 'slim-rails'
-
 gem 'faker'
-
+gem 'flash_rails_messages'
+gem 'rollbar'
 gem 'simple_form'
+gem 'slim-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

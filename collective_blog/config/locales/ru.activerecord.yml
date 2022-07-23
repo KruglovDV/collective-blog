@@ -4,6 +4,7 @@ ru:
       post: Пост
       user: Пользователь
       category: Категория
+      post_comment: Комментарий
     attributes:
       post:
         title: Заголовок
@@ -14,6 +15,8 @@ ru:
         password: Пароль
         password_confirmation: Подтверждение пароля
         remember_me: Запомнить
+      post_comment:
+        content: Текст
     errors:
       models:
         user:
@@ -34,5 +37,9 @@ ru:
               blank: не может быть пустым
             category:
               required: обязательно
+        post_comment:
+          attributes:
+            content:
+              blank: не может быть пустым
 
 
