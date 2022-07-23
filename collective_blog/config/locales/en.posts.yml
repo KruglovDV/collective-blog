@@ -2,6 +2,8 @@ en:
   posts:
     form:
       create_post: Create post
+    comment:
+      reply: reply
     index:
       header: Collective blog
     create:

@@ -2,6 +2,8 @@ ru:
   posts:
     form:
       create_post: Создать пост
+    comment:
+      reply: Ответить
     index:
       header: Коллективный блог
     create:
