@@ -25,7 +25,7 @@ jobs:
         run: make lint
       
       - name: precompile assets
-        run: bundle exec rake assets:precompile
+        run: cd collective_blog && bundle exec rake assets:precompile
 
       - name: Run tests
         run: make test

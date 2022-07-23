@@ -2,7 +2,7 @@
   .card-header.small.mb-2.d-flex
     div
       span.font-weight-bold
-        = comment.post.creator.email
+        = comment.user.email
       span.mx-2.font-weight-light
         = distance_of_time_in_words_to_now comment.created_at
 
