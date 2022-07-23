@@ -11,7 +11,6 @@ import "channels"
 
 import 'bootstrap/dist/js/bootstrap'
 import 'bootstrap/dist/css/bootstrap'
-require("stylesheets/application.scss")
 import "@fortawesome/fontawesome-free/css/all"
 
 Rails.start()
