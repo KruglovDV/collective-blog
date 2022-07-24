@@ -25,6 +25,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'opens show post page' do
+    log_in(users(:first))
     get post_path(posts(:first))
     assert_response :success
   end

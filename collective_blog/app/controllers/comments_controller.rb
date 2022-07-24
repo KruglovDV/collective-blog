@@ -9,9 +9,9 @@ class CommentsController < ApplicationController
     comment.user = current_user
 
     if comment.save
-      redirect_to post_path(post)
+      redirect_to post
     else
-      redirect_to post_path(post), notice: comment.errors.full_messages.join(', ')
+      redirect_to post, notice: comment.errors.full_messages.join(', ')
     end
   end
 

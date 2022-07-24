@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   resources :posts, only: %w[new create show] do
     resources :comments, only: %w[create]
+    resources :likes, only: %w[create destroy]
   end
 
   devise_for :users, controllers: {

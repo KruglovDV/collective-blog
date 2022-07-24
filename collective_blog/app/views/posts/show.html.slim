@@ -17,6 +17,14 @@ ol.breadcrumb
           = @post.creator.email
         span
           = distance_of_time_in_words_to_now @post.created_at
+      div
+        span.me-2 = @post.likes.count
+        - if @like
+          = link_to post_like_path(@post, @like), method: :delete do
+            i.fa.fa-thumbs-up[aria-hidden="true"]
+        - else
+          = link_to post_likes_path(@post), method: :post do
+            i.fa.fa-thumbs-up[aria-hidden="true"]
 .lead.mb-3
   = t('.comment')
 

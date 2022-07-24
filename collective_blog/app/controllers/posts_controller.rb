@@ -9,6 +9,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @like = current_user.likes.find { |like| like.post_id == @post.id } if current_user
   end
 
   def new
