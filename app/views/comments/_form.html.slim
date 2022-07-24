@@ -1,4 +1,4 @@
-= simple_form_for(comment, as: :comment, url: post_comments_path(post.id)) do |f|
+= simple_form_for(comment, url: post_comments_path(post.id)) do |f|
   - if comment.has_parent?
     = f.input :parent_id, as: :hidden, input_html: { value: comment.parent_id }
   = f.input :content, class: 'form-control text required'
