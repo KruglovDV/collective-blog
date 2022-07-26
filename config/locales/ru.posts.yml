@@ -6,6 +6,7 @@ ru:
       reply: Ответить
     index:
       header: Коллективный блог
+      liked: Понравилось
     create:
       success: Пост был создан
     show:

@@ -6,6 +6,7 @@ en:
       reply: reply
     index:
       header: Collective blog
+      liked: Liked
     create:
       success: Post was created
     show:
