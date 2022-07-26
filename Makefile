@@ -1,5 +1,5 @@
 deploy:
-		git push heroku master
+		git push heroku
 lint:
 	  bundle exec rubocop && bundle exec slim-lint app/views/
 install:
