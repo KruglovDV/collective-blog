@@ -9,14 +9,14 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'opens new post page' do
-    log_in(users(:first))
+    sign_in(users(:first_user))
     get new_post_path
     assert_response :success
   end
 
   test 'creates new post' do
-    log_in(users(:first))
-    new_post = { title: 'test title', body: 'test body', category_id: categories(:sport).id }
+    sign_in(users(:first_user))
+    new_post = { title: Faker::Lorem.sentence, body: Faker::Lorem.paragraph, category_id: categories(:sport).id }
     post posts_path, params: { post: new_post }
     created_post = Post.find_by(new_post)
 
@@ -25,8 +25,8 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'opens show post page' do
-    log_in(users(:first))
-    get post_path(posts(:first))
+    sign_in(users(:first_user))
+    get post_path(posts(:first_post))
     assert_response :success
   end
 end

@@ -13,7 +13,4 @@ class ActiveSupport::TestCase
   include Devise::Test::IntegrationHelpers
 
   # Add more helper methods to be used by all tests here...
-  def log_in(user)
-    sign_in(user)
-  end
 end

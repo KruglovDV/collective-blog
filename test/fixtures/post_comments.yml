@@ -1,10 +1,8 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-first:
-  content: MyText
-  post_id: 1
-  user_id: 1
-second:
-  content: MyText
-  post_id: 1
-  user_id: 1
+first_comment:
+  content: <%= Faker::Lorem.sentence %>
+  post: first_post
+  user: first_user
+second_comment:
+  content: <%= Faker::Lorem.sentence %>
+  post: first_post
+  user: first_user
