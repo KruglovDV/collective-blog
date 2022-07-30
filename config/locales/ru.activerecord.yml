@@ -8,7 +8,7 @@ ru:
     attributes:
       post:
         title: Заголовок
-        body: Содердание
+        body: Содержание
         category: Категория
       user:
         email: Почта

@@ -4,11 +4,16 @@ class LikesController < ApplicationController
   before_action :authenticate_user!, only: %i[create destory]
 
   def create
-    @post = Post.find(params[:post_id])
-    @like = @post.likes.build
-    @like.user = current_user
-    @like.save
-    redirect_to @post
+    post_id = params[:post_id]
+    @post = Post.find(post_id)
+    if @post.likes.find_by(post_id: post_id)
+      redirect_to @post, notice: t('.already_liked')
+    else
+      @like = @post.likes.build
+      @like.user = current_user
+      @like.save
+      redirect_to @post
+    end
   end
 
   def destroy
