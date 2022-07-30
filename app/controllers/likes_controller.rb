@@ -19,7 +19,7 @@ class LikesController < ApplicationController
   def destroy
     @like = PostLike.find(params[:id])
     unless @like
-      redirect_to posts_path
+      redirect_to post_path(params[:post_id])
     else
       @like.destroy
       redirect_to @like.post
