@@ -9,7 +9,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @like = current_user.likes.find { |like| like.post_id == @post.id } if current_user
+    @like = current_user.likes.find_by(post_id: @post.id) if current_user
   end
 
   def new
@@ -17,8 +17,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new post_params
-    @post.creator = current_user
+    @post = current_user.posts.build(post_params)
 
     if @post.save
       redirect_to root_path, notice: t('.success')

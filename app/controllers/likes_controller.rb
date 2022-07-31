@@ -7,10 +7,9 @@ class LikesController < ApplicationController
     post_id = params[:post_id]
     @post = Post.find(post_id)
     if @post.likes.find_by(post_id: post_id)
-      redirect_to @post, notice: t('.already_liked')
+      redirect_to @post
     else
-      @like = @post.likes.build
-      @like.user = current_user
+      @like = @post.likes.build(user: current_user)
       @like.save
       redirect_to @post
     end
