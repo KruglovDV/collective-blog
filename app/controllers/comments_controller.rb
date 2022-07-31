@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class CommentsController < ApplicationController
-  before_action :authenticate_user!, only: %i[create]
+  before_action :authenticate_user!
 
   def create
     post = Post.find(params[:post_id])
@@ -9,9 +9,9 @@ class CommentsController < ApplicationController
     comment.user = current_user
 
     if comment.save
-      redirect_to post
+      redirect_to post, notice: t('.success')
     else
-      redirect_to post, notice: comment.errors.full_messages.join(', ')
+      redirect_to post, alert: comment.errors.full_messages.join(', ')
     end
   end
 

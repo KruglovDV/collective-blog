@@ -1,27 +1,24 @@
 # frozen_string_literal: true
 
 class LikesController < ApplicationController
-  before_action :authenticate_user!, only: %i[create destory]
+  before_action :authenticate_user!
 
   def create
     post_id = params[:post_id]
     @post = Post.find(post_id)
-    if @post.likes.find_by(post_id: post_id)
-      redirect_to @post
-    else
+
+    unless @post.likes.find_by(post_id: post_id, user_id: current_user.id)
       @like = @post.likes.build(user: current_user)
       @like.save
-      redirect_to @post
     end
+    redirect_to @post
   end
 
   def destroy
     @like = PostLike.find_by(id: params[:id])
-    unless @like
-      redirect_to post_path(params[:post_id])
-    else
-      @like.destroy
-      redirect_to @like.post
-    end
+    return redirect_to post_path(params[:post_id]) if @like.nil?
+
+    @like.destroy
+    redirect_to @like.post
   end
 end

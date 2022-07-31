@@ -4,12 +4,13 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, only: %i[create new]
 
   def index
-    @posts = Post.all.order('created_at DESC')
+    @posts = Post.all.includes(:creator).order('created_at DESC')
   end
 
   def show
     @post = Post.find(params[:id])
     @like = current_user.likes.find_by(post_id: @post.id) if current_user
+    @comment = @post.comments.build
   end
 
   def new
