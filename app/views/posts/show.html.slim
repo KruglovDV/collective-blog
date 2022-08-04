@@ -28,9 +28,9 @@ ol.breadcrumb
 .lead.mb-3
   = t('.comment')
 
-= render 'comments/form', post: @post, comment: @comment, parent_id: nil
+= render 'comments/form', post: @post, comment: @newComment, parent_id: nil
 
-- @post.comments.each do |comment|
+- @comments.each do |comment, children|
   - if comment.id && comment.is_root?
     .mt-3
-      = render 'comment', comment: comment, children: comment.subtree.arrange[comment]
+      = render 'comment', comment: comment, children: children, newComment: @newComment

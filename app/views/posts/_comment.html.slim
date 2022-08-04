@@ -10,11 +10,11 @@
     .w-100
       .mb-3 = comment.content
       div
-        - children.each_key do |child|
-          = render 'comment', comment: child, children: children[child]
+        - children.each do |childComment, childComments|
+          = render 'comment', comment: childComment, children: childComments, newComment: newComment
   hr.my-2
   .mb-2.m-2
     a.link-dark.text-decoration-none[data-bs-toggle="collapse" href="#collapse-#{comment.id}" role="button" aria-expanded="false"] = t('.reply')
     .collapse[id="collapse-#{comment.id}"]
       .mb-2.m-4
-        = render 'comments/form', post: comment.post, comment: @comment, parent_id: comment.id
+        = render 'comments/form', post: comment.post, comment: newComment, parent_id: comment.id

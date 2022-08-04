@@ -10,7 +10,8 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @like = current_user.likes.find_by(post_id: @post.id) if current_user
-    @comment = @post.comments.build
+    @newComment = @post.comments.build
+    @comments = @post.comments.arrange
   end
 
   def new
