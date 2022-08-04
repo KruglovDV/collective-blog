@@ -18,7 +18,7 @@ ol.breadcrumb
         span
           = distance_of_time_in_words_to_now @post.created_at
       div
-        span.me-2 = @post.likes.count
+        span.me-2 = @post.likes.size
         - if @like
           = link_to post_like_path(@post, @like), method: :delete do
             i.fa.fa-thumbs-up.text-primary[aria-hidden="true"]
