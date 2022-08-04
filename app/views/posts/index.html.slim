@@ -12,7 +12,7 @@ h1 = t('.header')
             = post.body
           .text-right.small.text-muted.mt-auto
             span.me-2
-              = "#{t('.liked')}: #{post.likes.size}"
+              = "#{t('.liked')}: #{post.likes_count || 0}"
             span.me-2
               = distance_of_time_in_words_to_now post.created_at
             span
